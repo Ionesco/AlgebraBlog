@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html lang="hr">
-    <head>
-		<meta charset ="utf-8">
-		<title>Algebra Blog popis</title>
-    </head>
-    <body>
-		@foreach ($items as $item)
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+		
+			@if (count($items) > 0)
+		
+				@foreach ($items as $item)
 			
-			<h2><a href ="items/{{ $item->id }}"> {{ $item->title }}</a></h2>
-			<div>{{ $item->content }}</div>
+					<h2><a href ="items/{{ $item->id }}"> {{ $item->title }}</a></h2>
+						
+				@endforeach
+	
+			@else
+				<h2> Nema zapisa u Blogu </h2>
+			@endif
 			
-		@endforeach
-    </body>
-</html>
+		</div>
+    </div>
+</div>
+
+@endsection
