@@ -37,8 +37,10 @@ Route::post ('/item/{id}/edit', 'ItemsController@update');
 
 //Brisanje Items
 
-Route::delete ('/item/{id}', 'ItemsController@destroy');
-
+Route::get ('/item/{id}/del', 'ItemsController@destroy');
+	{
+		
+	}
 
 
 Auth::routes();
