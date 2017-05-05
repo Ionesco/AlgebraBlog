@@ -1,22 +1,23 @@
-<!DOCTYPE html>
-<html lang="hr">
-    <head>
-		<meta charset ="utf-8">
-		<title>Algebra Blog novo</title>
-    </head>
-    <body>
-		
-		<form method = "post" action = "">
-			{{ csrf_field() }}
+@extends('layouts.app')
+
+@section('content')
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
 			
-			naslov:
-			<input type = "text" name = "title" /><br/><br/>
-			sadržaj:
-			<textarea name = "content"></textarea><br/><br/>
+				<form method = "post" action = "">
+					{{ csrf_field() }}
 			
-			<input type = "submit" value = "Spremi" />
+					naslov:
+						<input type = "text" name = "title" /><br/><br/>
+					sadržaj:
+						<textarea name = "content"></textarea><br/><br/>
+			
+					<input type = "submit" value = "Spremi" />
 		
-		</form>
-		
-    </body>
-</html>
+				</form>
+		</div>
+    </div>
+</div>
+
+@endsection

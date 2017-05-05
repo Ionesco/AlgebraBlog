@@ -59,11 +59,16 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
+                                    
+									<li>
+										<a href="{{ url ('items/new') }}" > Novi zapis </a>
+									</li>
+									
+									<li>
+										<a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            Odjava
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -80,6 +85,12 @@
 
         @yield('content')
     </div>
+	
+		<footer class="footer">
+			<div class="container">
+				<span class="text-muted">AlgebraBlog</span>
+			</div>
+		</footer>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
